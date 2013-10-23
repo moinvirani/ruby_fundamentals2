@@ -41,12 +41,29 @@ end
 puts "The cohort has increased by 5%! Here are the new numbers"
 increase_size(students, 1.05)
 show (students)
-puts '\n'
+puts "\n"
+
+# Question 5 - delete the 2nd cohort and redisplay
+
+def delete_cohort(hash, key)
+	puts "About to delete #{key} "
+	hash.delete(key)
+end
+
+delete_cohort(students, :cohort2)
+show(students)
+puts "\n"
+
+# bonus question
+
+def total_value(hash)
+	total = 0
+	hash.each do |k,v| total += v # can also be written as total = total + v
+	end
+	return total
+end
 
 
-
-
-
-
+puts "There have been a total of #{total} students at Bitmaker Labs so far"
 
 
